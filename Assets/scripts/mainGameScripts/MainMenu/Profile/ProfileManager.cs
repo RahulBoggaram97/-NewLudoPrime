@@ -21,6 +21,7 @@ namespace com.impactionalGames.LudoPrime
         public Text totalmatchesText;
         public Text wonMatchesText;
         public Text loseMatchesText;
+        public Text refrelCodeText;
 
 
         private void Start()
@@ -40,6 +41,8 @@ namespace com.impactionalGames.LudoPrime
             wonMatchesText.text = playerPermData.getWonMatches();
 
             loseMatchesText.text = playerPermData.getLoseMatches();
+
+            refrelCodeText.text = "Refrel Code: " + playerPermData.getReferCode();  
          
         }
 
