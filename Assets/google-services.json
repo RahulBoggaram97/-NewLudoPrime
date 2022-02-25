@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "527917175408",
+    "project_id": "ludo-9edc4",
+    "firebase_url": "https://ludo-9edc4-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "storage_bucket": "ludo-9edc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527917175408:android:5842a76d5c9b063eb09ab5",
+        "android_client_info": {
+          "package_name": "com.impactionalGames.LudoPrime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527917175408-lip3pbul6oc9inq3m5a914p2r121tm63.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClvW02zu92TozD-PuL_MVuZfKw0HLKJuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527917175408-lip3pbul6oc9inq3m5a914p2r121tm63.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
