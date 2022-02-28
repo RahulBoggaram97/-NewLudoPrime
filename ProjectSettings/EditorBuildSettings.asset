@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/mainGame/flutterIntrigation.unity
+    guid: 066c6d3078e92f54ea822f3c780a2035
+  - enabled: 1
     path: Assets/Scenes/mainGame/NewLoadScene.unity
     guid: 79561819735af3f448e8307c40ecf013
   - enabled: 1
