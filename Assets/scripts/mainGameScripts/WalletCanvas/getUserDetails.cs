@@ -11,7 +11,7 @@ namespace com.impactionalGames.LudoPrime
     {
         public MoneyManager moneyManager;
 
-        public webVeiwManager webMan;
+        //public webVeiwManager webMan;
 
         private void Start()
         {
@@ -80,7 +80,7 @@ namespace com.impactionalGames.LudoPrime
 
                     playerPermData.setReferdBy(node[0]["Referrer"].ToString());
 
-                    webMan.status.text = "get user details got called    " + playerPermData.getMoney();
+                    //webMan.status.text = "get user details got called    " + playerPermData.getMoney();
 
                     moneyManager.moneyText.text = playerPermData.getMoney().ToString();
                     moneyManager.totalBalanceText.text = playerPermData.getMoney().ToString();
