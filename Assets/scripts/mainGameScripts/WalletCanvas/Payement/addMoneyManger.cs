@@ -9,13 +9,13 @@ namespace com.impactionalGames.LudoPrime
     {
         public InputField amountField;
 
-        public webVeiwManager webViewMan;
+        //public webVeiwManager webViewMan;
 
         public void AddMoney()
         {
-            webViewMan.Url = "https://ludogame-backend.herokuapp.com/paynow/" + playerPermData.getPhoneNumber() + "/" + amountField.text;
+            //webViewMan.Url = "https://ludogame-backend.herokuapp.com/paynow/" + playerPermData.getPhoneNumber() + "/" + amountField.text;
 
-            webViewMan.openPayTmGateway();
+            //webViewMan.openPayTmGateway();
         }
     }
 }
