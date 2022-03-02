@@ -20,15 +20,22 @@ namespace com.impactionalGames.LudoPrime
             //loadUpNextScene();
         }
 
-        public void passPhoneNumberToUnity(String phoneNum, String _refrelCode)
+        public void passPhoneNumberToUnity(String phoneNum)
         {
             playerPermData.setPhoneNumber(phoneNum);
-            refrelCode = _refrelCode;
 
             createUser();
-
             
         }
+
+        public void passRefrelCodeToUnity(String _refrelCode)
+        {
+            refrelCode= _refrelCode;
+        }
+
+       
+
+        
 
         
 
