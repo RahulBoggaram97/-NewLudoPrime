@@ -13,18 +13,13 @@ namespace com.impactionalGames.LudoPrime
 
         public GameObject leaderBoard;
 
-        private void Update()
+        public void exitButton()
         {
-            if(leaderBoard.activeSelf == true && Input.GetKeyDown(KeyCode.Escape))
-            {
-                SceneManager.LoadScene("GameMenu");
-
                 PhotonNetwork.LeaveRoom();
-                PhotonNetwork.LeaveLobby(); 
-                SceneManager.LoadScene("GameMenu");
-
-               
-            }
+                PhotonNetwork.LeaveLobby();
+                PhotonNetwork.Disconnect();
+            SceneManager.LoadScene("GameMenu");
+                 
         }
 
         public void UpdateLeaderBoard()

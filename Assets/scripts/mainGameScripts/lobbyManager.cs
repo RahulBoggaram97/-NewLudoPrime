@@ -26,6 +26,7 @@ namespace com.impactionalGames.LudoPrime
         public Text debugtextLobby;
 
         public Button startButton;
+        public Button backButton;
 
         [Header("Player images in lobby")]
         public GameObject[] playerLobyImageArray;
@@ -47,17 +48,17 @@ namespace com.impactionalGames.LudoPrime
             debugtextLobby.text = "the Room code is " + PhotonNetwork.CurrentRoom.Name;
         }
 
-        private void Update()
+       
+
+
+        public void backButtonForCustomGames()
         {
-            if (Input.GetKey(KeyCode.Escape))
+            if (PhotonNetwork.CurrentRoom.IsOpen != false)
             {
-                if(PhotonNetwork.CurrentRoom.IsOpen != false)
-                {
-                    SceneManager.LoadScene("GameMenu");
-                   
-                    PhotonNetwork.LeaveRoom();
-                    PhotonNetwork.LeaveLobby();
-                }
+                SceneManager.LoadScene("GameMenu");
+
+                PhotonNetwork.LeaveRoom();
+                PhotonNetwork.LeaveLobby();
             }
         }
 
@@ -197,6 +198,7 @@ namespace com.impactionalGames.LudoPrime
             if(checkIfItsOneVoneLobby() )
             {
                 startButton.gameObject.SetActive(false);
+                backButton.gameObject.SetActive(false);
                 setUpForOneVOneLobby();
 
                 
@@ -205,10 +207,12 @@ namespace com.impactionalGames.LudoPrime
             {
                 setUpForFourPlayerGame();
                 startButton.gameObject.SetActive(false);
+                backButton.gameObject.SetActive(false);
             }
             else
             {
                startButton.gameObject.SetActive(true);
+                backButton.gameObject.SetActive(true) ;
                 return;
             }
         }
