@@ -31,59 +31,59 @@ namespace com.impactionalGames.LudoPrime
 
         private void Update()
         {
-            updateTimer();
+            //updateTimer();
         }
 
-        void updateTimer()
-        {
-            timer = timer - Time.deltaTime;
+        //void updateTimer()
+        //{
+        //    timer = timer - Time.deltaTime;
             
-            if (timer < 0f)
-            {
-                if (availablePosition() != null)
-                {
-                    updateOnlineMenuData();
-                    timer = 10f;
-                }
-            }
-        }
+        //    if (timer < 0f)
+        //    {
+        //        if (availablePosition() != null)
+        //        {
+        //            updateOnlineMenuData();
+        //            timer = 10f;
+        //        }
+        //    }
+        //}
 
         
         
 
 
 
-         void updateOnlineMenuData()
-        {
-            Debug.Log("updateonlinemenu called");
+        // void updateOnlineMenuData()
+        //{
+        //    Debug.Log("updateonlinemenu called");
             
-            Instantiate(prefabToInstantiate(), availablePosition());   
+        //    Instantiate(prefabToInstantiate() /*availablePosition()*/);   
            
-        }
+        //}
 
-        GameObject prefabToInstantiate()
-        {
-            GameObject instance = lobbyPrefabs[Random.Range(0, lobbyPrefabs.Length - 1)];
-            return instance;
-        }
+        //GameObject prefabToInstantiate()
+        //{
+        //    GameObject instance = lobbyPrefabs[Random.Range(0, lobbyPrefabs.Length - 1)];
+        //    return instance;
+        //}
     
 
-        private Transform availablePosition()
-        {
-           Transform availPos;
+        //private Transform availablePosition()
+        //{
+        //   Transform availPos;
 
-           for (int i = 0; i < lobbyUIPos.Length; i++)
-           {
-                if (lobbyUIPos[i].childCount == 0)
-                {
-                     availPos = lobbyUIPos[i];
-                     return availPos;
-                }
-                Debug.Log("avail pos got called");
-           }
-           return null;
+        //   for (int i = 0; i < lobbyUIPos.Length; i++)
+        //   {
+        //        if (lobbyUIPos[i].childCount == 0)
+        //        {
+        //             availPos = lobbyUIPos[i];
+        //             return availPos;
+        //        }
+        //        Debug.Log("avail pos got called");
+        //   }
+        //   return null;
                 
-        }
+        //}
 
 
 

@@ -2326,6 +2326,7 @@ GameObject:
   - component: {fileID: 715359910}
   - component: {fileID: 715359911}
   - component: {fileID: 715359913}
+  - component: {fileID: 715359912}
   m_Layer: 0
   m_Name: WallletManager
   m_TagString: Untagged
@@ -2396,6 +2397,18 @@ MonoBehaviour:
   moneyText: {fileID: 1231365227}
   popUpPanel: {fileID: 727295350}
   totalBalanceText: {fileID: 682703750}
+--- !u!114 &715359912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715359907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f0d555a552e429a9e36a2bec4c1faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &715359913
 MonoBehaviour:
   m_ObjectHideFlags: 0

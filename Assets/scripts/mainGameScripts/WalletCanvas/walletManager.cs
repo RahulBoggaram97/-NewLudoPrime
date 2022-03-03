@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace com.impactionalGames.LudoPrime
 {
 
-    public class walletManager : MonoBehaviour
+    public class walletManager : MonoBehaviour, IEventSystemHandler
     {
 
         [Header("Panles")]
@@ -24,7 +25,7 @@ namespace com.impactionalGames.LudoPrime
         public GameObject debugPanel;
 
        
-
+       
         
        
 
@@ -42,6 +43,8 @@ namespace com.impactionalGames.LudoPrime
         {
             updateWalletState(walletState.intial);
         }
+
+       
 
         private void Update()
         {
@@ -201,12 +204,17 @@ namespace com.impactionalGames.LudoPrime
 
         public void AddMoneyOnClick()
         {
-            walletManager.instance.updateWalletState(walletState.addMoney);
+            //walletManager.instance.updateWalletState(walletState.addMoney);
+            Debug.Log("sent message to fullter");
+            UnityMessageManager.Instance.SendMessageToFlutter("Add Money Called");
         }
 
         public void WithdrawOnClick()
         {
-            walletManager.instance.updateWalletState(walletState.withdraw);
+            //walletManager.instance.updateWalletState(walletState.withdraw);
+            UnityMessageManager.Instance.SendMessageToFlutter("Withdrawl Money Called");
+            Debug.Log("withdraw called");
+
         }
 
         public void SettingsOnClick()
