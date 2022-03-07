@@ -186,10 +186,27 @@ namespace com.impactionalGames.LudoPrime
             }
         }
        
+        //for flutter calls
         public void IntialOnClick()
         {
            walletManager.instance.updateWalletState(walletState.intial);
         }
+
+        public void AddMoneyOnClick()
+        {
+            //walletManager.instance.updateWalletState(walletState.addMoney);
+            Debug.Log("sent message to fullter");
+            UnityMessageManager.Instance.SendMessageToFlutter("AddMoney");
+        }
+
+        public void WithdrawOnClick()
+        {
+            //walletManager.instance.updateWalletState(walletState.withdraw);
+            UnityMessageManager.Instance.SendMessageToFlutter("Withdrawl");
+            Debug.Log("withdraw called");
+
+        }
+        //for flutter calles end
 
         public void ProfileOnClick()
         {
@@ -202,20 +219,7 @@ namespace com.impactionalGames.LudoPrime
             walletManager.instance.updateWalletState(walletState.walletPanel);
         }
 
-        public void AddMoneyOnClick()
-        {
-            //walletManager.instance.updateWalletState(walletState.addMoney);
-            Debug.Log("sent message to fullter");
-            UnityMessageManager.Instance.SendMessageToFlutter("Add Money Called");
-        }
-
-        public void WithdrawOnClick()
-        {
-            //walletManager.instance.updateWalletState(walletState.withdraw);
-            UnityMessageManager.Instance.SendMessageToFlutter("Withdrawl Money Called");
-            Debug.Log("withdraw called");
-
-        }
+       
 
         public void SettingsOnClick()
         {

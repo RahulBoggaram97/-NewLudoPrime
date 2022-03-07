@@ -6,6 +6,7 @@ using Photon.Realtime;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 using System;
+using TMPro;
 
 namespace com.impactionalGames.LudoPrime
 {
@@ -50,6 +51,7 @@ namespace com.impactionalGames.LudoPrime
         }
 
         void handleTimeRunOut()
+
         {
             //Destroy(gO);
         }
@@ -93,6 +95,8 @@ namespace com.impactionalGames.LudoPrime
         {
             manageFee?.Invoke(entryFee);
         }
+
+       
 
        
     }
