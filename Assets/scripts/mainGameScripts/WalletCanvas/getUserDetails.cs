@@ -63,9 +63,14 @@ namespace com.impactionalGames.LudoPrime
                     //"LastGame":0,
                     //"MatchPoints":null}]
 
-                    Debug.Log(node[0]["UserId"].ToString());
+                    Debug.Log(node[0]["ProfilePic"].ToString());
 
-                   
+
+                    string imageurl = node[0]["ProfilePic"].ToString();
+                    
+                    //removing the invert commas for better use in the end;
+                   playerPermData.setProfilePicUrl(imageurl.Substring(1, imageurl.Length - 2));
+
                     playerPermData.setMoney(int.Parse(node[0]["Wallet"].ToString()));
 
                     playerPermData.setWonMatches(node[0]["Won"].ToString());

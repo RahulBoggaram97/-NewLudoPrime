@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Networking;
+using UnityEditor;
+using SimpleJSON;
 
 namespace com.impactionalGames.LudoPrime
 {
@@ -12,6 +16,7 @@ namespace com.impactionalGames.LudoPrime
         public const string USERNAME_PREF_KEY = "userName";
         public static string MONEY_PREF_KEY = "money";
         public static string PHONE_NO_PREF_KEY = "phoneNumber";
+        public static string PROFILE_PIC_URL_PREF_KEY = "profilePicUrl";
 
         public const string WON_MATCHES_PREF_KEY = "won";
         public const string LOSE_MATCHES_PREF_KEY = "lose";
@@ -44,6 +49,7 @@ namespace com.impactionalGames.LudoPrime
         public static string getEmail()
         {
             return PlayerPrefs.GetString(EMAIL_ID_PREF_KEY);
+           
         }
 
         //LOCAL ID
@@ -89,6 +95,23 @@ namespace com.impactionalGames.LudoPrime
         {
             return PlayerPrefs.GetString(PHONE_NO_PREF_KEY);
         }
+
+
+        //PROFILE PIC
+        public static void setProfilePicUrl(string value)
+        {
+            PlayerPrefs.SetString(PROFILE_PIC_URL_PREF_KEY, value);
+        }
+
+        public static string getProfilePicUrl()
+        {
+            return PlayerPrefs.GetString(PROFILE_PIC_URL_PREF_KEY);
+        }
+
+
+
+
+
 
 
         //WON MATCHES
